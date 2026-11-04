@@ -1,0 +1,29 @@
+How to set up raspberry pi virtual environment
+
+Step 1 - download tiger VNC on your personal machine and open it, then put in the IP address of the pi (make sure the pi has power before you connect)
+Step 2 - inside the vnc viewer open the terminal on the pi and run the command “sudo apt update” and then “sudo apt install python3-opencv”
+Step 3 - activate the virtual environment (deleted any old ones) run “rm -rf ~/servo-env” then “python3 -m venv ~/servo-env --system-site-packages” then “source ~/servo-env/bin/activate”
+Step 4 - pip install adafruit-circuitpython-servokit RPi.GPIO dash dash-bootstrap-components flask plotly
+Step 5 - navigate to the correct directory, for example “cd ~/Programming/outreach-main”
+
+
+
+
+
+Code shortcut version
+sudo apt update
+sudo apt install python3-opencv
+
+rm -rf ~/servo-env
+python3 -m venv ~/servo-env --system-site-packages
+source ~/servo-env/bin/activate
+
+pip install \
+    RPi.GPIO \
+    adafruit-circuitpython-servokit \
+    dash \
+    dash-bootstrap-components \
+    flask \
+    plotly
+
+cd ~/Programming/outreach-main
